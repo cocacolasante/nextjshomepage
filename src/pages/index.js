@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import WeatherCard from 'components/WeatherCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,14 +30,26 @@ export default function Home() {
         </Link>
         </div>
         <div className={styles.topicDiv}>
+        <Link href="/markets">
           <h2>Markets</h2>
+
+        </Link>
         </div>
         <div className={styles.topicDiv}>
+        <Link href="/gamenews">
           <h2>News/Games</h2>
+          
+        </Link>
         </div>
         <div className={styles.topicDiv}>
           <h2>Updates</h2>
         </div>
+      </div>
+      <div className={styles.openaiDiv}>
+        <h2>What are you looking for?</h2>
+        <p>API for local places (coffee, food, drinks etc)</p>
+        <input type="checkbox" value="coffee" placeholder="coffee" />
+        
       </div>
       <div className={styles.openaiDiv}>
         <h2>Open AI ChatGPT API Below: </h2>
